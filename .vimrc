@@ -39,8 +39,7 @@ call plug#begin()
 " themes
  Plug 'lamu-ai/lamu.vim'
  Plug 'adigitoleo/vim-mellow', { 'tag': '*' }
- Plug 'Shadorain/shadotheme'
-
+ Plug 'yuttie/hydrangea-vim'
 call plug#end()
 
 " Nerdtree
@@ -53,13 +52,18 @@ let g:NERDTreeGitStatusUntrackedFilesMode = 'all' " default: normal
 let g:NERDTreeGitStatusShowClean = 0 " default: 0
 
 " theme
-colorscheme mellow
+colorscheme hydrangea
 
 " keybinds settings
 inoremap <C-l> <esc>$a<C-m>
 inoremap <C-k> <esc>k$a<C-m>
 nnoremap <C-l> <esc>$a<C-m>
 nnoremap <C-k> <esc>k$a<C-m>
+
+nnoremap <C-n> <cmd>new<CR>
+inoremap <C-n> <cmd>new<CR>
+nnoremap <C-b> <cmd>Vex<CR>
+inoremap <C-b> <cmd>Vex<CR>
 
 nnoremap <C-right> <C-W>l
 nnoremap <C-left> <C-W>h
