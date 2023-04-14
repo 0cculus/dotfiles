@@ -7,6 +7,7 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set hidden
+set nocompatible
 set ttyfast
 set backspace=indent,eol,start
 set ignorecase
@@ -40,9 +41,14 @@ call plug#begin()
  Plug 'lamu-ai/lamu.vim'
  Plug 'adigitoleo/vim-mellow', { 'tag': '*' }
  Plug 'yuttie/hydrangea-vim'
+
+" function definition
+Plug 'pechorin/any-jump.vim'
+
 call plug#end()
 
-" Nerdtree
+" plugin settings
+""  Nerdtree
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let g:nerdtree_vis_confirm_open = 0
 let g:nerdtree_vis_confirm_copy = 0
@@ -59,6 +65,11 @@ inoremap <C-l> <esc>$a<C-m>
 inoremap <C-k> <esc>k$a<C-m>
 nnoremap <C-l> <esc>$a<C-m>
 nnoremap <C-k> <esc>k$a<C-m>
+vnoremap <C-up> :m '<-2<CR>gv=gv
+vnoremap <C-down> :m '>+1<CR>gv=gv
+inoremap <C-up> <esc>:m .-2<CR>==a
+inoremap <C-down> <esc>:m .+1<CR>==a
+inoremap <S-tab> <C-p>
 
 nnoremap <C-n> <cmd>new<CR>
 inoremap <C-n> <cmd>new<CR>
@@ -70,12 +81,11 @@ nnoremap <C-left> <C-W>h
 nnoremap <C-down> <C-W>j
 nnoremap <C-up> <C-W>k
 
-vnoremap <C-down> :m '>+1<CR>gv=gv
-vnoremap <C-up> :m '<-2<CR>gv=gv
-inoremap <C-up> <esc>:m .-2<CR>==a
-inoremap <C-down> <esc>:m .+1<CR>==a
-
-inoremap <C-y> <plug>(fzf-complete-path)
+nnoremap <C-u> <cmd>Files<CR>
 nnoremap <C-y> <cmd>Files<CR>
 inoremap <C-t> <cmd>NERDTreeToggle<CR>
-nnoremap <C-t> <cmd>NERDTreeToggle<CR>
+nnoremap <C-i> <cmd>NERDTreeToggle<CR>
+nnoremap <C-d> :AnyJump<CR>
+nnoremap <C-i> :AnyJump<CR>
+
+nnoremap <C-a> :noh<CR>
