@@ -1,9 +1,8 @@
-" Name:     hydrangea.vim* --- (modified)Hydrangea theme for Vim
-" Author:   Yuta Taniguchi <yuta.taniguchi.y.t@gmail.com> + me
-" URL:      https://github.com/yuttie/hydrangea-vim or https://github.com/0cculus/dotifiles
+" Name:     hydrangea.vim --- Hydrangea theme for Vim
+" Author:   Yuta Taniguchi <yuta.taniguchi.y.t@gmail.com>
+" URL:      https://github.com/yuttie/hydrangea-vim
 " Version:  6.2.0
 " License:  MIT License
-" Notes:	Modified from original by me c:
 
 hi clear
 if exists('syntax_on')
@@ -25,8 +24,8 @@ hi VisualNOS cterm=underline guifg=fg gui=underline
 hi Folded ctermfg=247 ctermbg=235 cterm=NONE guifg=#aeb9d2 guibg=#232833 gui=NONE
 hi FoldColumn ctermfg=247 ctermbg=234 cterm=NONE guifg=#aeb9d2 guibg=#1b202a gui=NONE
 hi Title ctermfg=133 ctermbg=NONE cterm=bold guifg=#b966af guibg=NONE gui=bold
-hi StatusLine ctermfg=247 ctermbg=236 cterm=NONE guifg=#aeb9d2 guibg=#303540 gui=NONE
-hi StatusLineNC ctermfg=239 ctermbg=235 cterm=NONE guifg=#4b505d guibg=#232833 gui=NONE
+hi StatusLine ctermfg=7 ctermbg=98 cterm=NONE guifg=#aeb9d2 guibg=#303540 gui=NONE
+hi StatusLineNC ctermfg=232 ctermbg=69 cterm=NONE guifg=#4b505d guibg=#232833 gui=NONE
 hi VertSplit ctermfg=32 ctermbg=234 cterm=NONE guifg=#1c5280 guibg=#1b202a gui=NONE
 hi WinSeparator ctermfg=32 ctermbg=234 cterm=NONE guifg=#1c5280 guibg=#1b202a gui=NONE
 hi LineNr ctermfg=239 ctermbg=235 cterm=NONE guifg=#4b505d guibg=#232833 gui=NONE
